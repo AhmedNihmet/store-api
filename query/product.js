@@ -41,6 +41,7 @@ function readDataGridQuery(pageSize, page, filters, sortArray) {
         .andWhere("product.deleted", 0);
     filter(filters, recordsCount);
 
+
     return Promise.all([records, recordsCount]).then((result) => {
         const [data, [dataCount]] = result;
         const pages = Math.ceil(dataCount.count / pageSize);
@@ -85,7 +86,7 @@ module.exports = {
             req.query.pageSize,
             req.query.page,
             req.query.filtered,
-            req.query.sorted
+            req.query.sorted,
         );
         return query;
     },
