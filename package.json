@@ -1,0 +1,32 @@
+{
+  "name": "lezzo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npx nodemon index.js",
+    "db:migrate": "npx knex migrate:latest --knexfile ./database/knexfile.js",
+    "db:seed": "npx knex seed:run --knexfile ./database/knexfile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.14",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "sha1": "^1.1.1",
+    "sharp": "^0.29.3",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
